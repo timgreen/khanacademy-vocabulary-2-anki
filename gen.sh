@@ -1,5 +1,7 @@
 #!/bin/bash
 
+TTS_SCRIPT=''
+
 extract_content() {
   local html="$(cat)"
 
@@ -43,6 +45,9 @@ EOH
       read -r empty
 
       echo "## $word #card-reverse"
+      if [[ "$TTS_SCRIPT" != "" ]]; then
+        echo "![[$($TTS_SCRIPT "$word")]]"
+      fi
       echo $grammar
       echo $definition
       echo $sentence | sed 's/__[^_]\+__/`___`/g'
@@ -53,6 +58,9 @@ EOH
   done
 }
 
-curl "$1" \
+url="$1"
+TTS_SCRIPT="$2"
+
+curl "$url" \
   | extract_content \
   | convert_to_obsidian_flashcards

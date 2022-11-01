@@ -6,10 +6,21 @@ Convert Khan Academy Unit Vocabulary[^1] to Anki flashcards.
 
 This project doesn't directly talking to Anki, it uses [Flashcards-Obsidian][] as a bridge.
 
-## Features
+## Usage
 
-- [ ] Reverse mode
-- [ ] Add audio [optional]
+```bash
+./gen.sh <url> [tts_script] > file.md
+```
+
+- Url examples: [url1][], [url2][].
+- If specified *tts_script*, audios will be embeded.
+
+[url1]: https://www.khanacademy.org/ela/cc-2nd-reading-vocab/xfb4fc0bf01437792:cc-2nd-fairy-tales-retold/xfb4fc0bf01437792:building-knowledge/a/fairy-tales-retold-unit-vocabulary
+[url2]: https://www.khanacademy.org/ela/cc-2nd-reading-vocab/xfb4fc0bf01437792:cc-2nd-rural-suburban-urban/xfb4fc0bf01437792:rural-suburban-urban-building-knowledge/a/rural-suburban-urban-unit-vocabulary
+
+### TTS Script
+
+TBD
 
 ## Random Tips
 
