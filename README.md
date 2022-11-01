@@ -20,7 +20,9 @@ This project doesn't directly talking to Anki, it uses [Flashcards-Obsidian][] a
 
 ### TTS Script
 
-TBD
+The *TTS_SCRIPT* should get the word given first command parameter and output the generated tts audio file to the *STDOUT*.
+
+Here is the [example tts script](./example_tts.sh).
 
 ## Random Tips
 
